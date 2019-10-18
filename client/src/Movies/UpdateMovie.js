@@ -48,7 +48,8 @@ const UpdateMovie = props => {
       .catch(error => {
           console.log(error.message)
       })
-      props.history.push('/movies');
+
+      setMovie({...initialState});
   }
 
   return (
