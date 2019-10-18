@@ -66,6 +66,28 @@ body {
 }
 .save-button {
   position: absolute;
+  text-align: center;
+  width: 50px;
+  top: 25px;
+  right: 175px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+.edit-button {
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  top: 25px;
+  right: 100px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: lightseagreen;
+}
+.delete-button {
+  position: absolute;
+  text-align: center;
+  width: 50px;
   top: 25px;
   right: 25px;
   border: 1px solid grey;
@@ -73,6 +95,14 @@ body {
   background-color: lightseagreen;
 }
 .save-button:hover {
+  background-color: green;
+  color: white;
+}
+.edit-button:hover {
+  background-color: green;
+  color: white;
+}
+.delete-button:hover {
   background-color: green;
   color: white;
 }
@@ -90,8 +120,13 @@ body {
 /* update form */
 
 .update-form {
-  width: 50%;
+  background-color: white;
+  width: 400px;
   margin: 75px auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
+  0 2px 4px rgba(0, 0, 0, 0.24);
 }
 
 .update-title {
@@ -132,5 +167,10 @@ body {
 
 .update-btn {
   width: 75px;
+  margin: 15px auto;
+}
+
+.add-btn {
+  width: 100px;
   margin: 15px auto;
 }

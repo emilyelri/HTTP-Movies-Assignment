@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const MovieCard = props => {
 
@@ -9,7 +8,7 @@ const MovieCard = props => {
     <div className="movie-card">
       <div className="movie-top">
         <h2>{title}</h2>
-        <Link to={`/update-movie/${props.movie.id}`}><button className="edit-btn"> 🖊 </button></Link>
+        {/* <Link to={`/update-movie/${props.movie.id}`}><button className="edit-btn"> 🖊 </button></Link> */}
       </div>
       <div className="movie-director">
         Director: <em>{director}</em>

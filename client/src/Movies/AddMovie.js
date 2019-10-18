@@ -21,23 +21,25 @@ const UpdateMovie = props => {
     }
   }
 
-  const saveMovie = e => {
+  const addMovie = e => {
       e.preventDefault();
       console.log(movie);
-    //   axios.post()
-    //   .then(response => {
-    //       console.log(response);
-    //   })
-    //   .catch(error => {
-    //       console.log(error)
-    //   })
-    //   props.history.push('/movies');
-  }
+      axios
+      .post(`http://localhost:5000/api/movies`, movie)
+      .then(response => {
+          props.setMovies(response.data)
+          props.history.push("/")
+      })
+      .catch(error => {
+          console.log(error.message)
+      })
+      setMovie({...initialState})
+}
 
   return (
     <div className="update-form">
-        <h3 className="update-title">Update Movie</h3>
-      <form onSubmit={saveMovie} className="form">
+        <h3 className="update-title">Add a Movie</h3>
+      <form onSubmit={addMovie} className="form">
         <div className="form-one-line">
           <div className="pair">
             <label htmlFor="title">Title</label>
@@ -56,7 +58,7 @@ const UpdateMovie = props => {
           <label htmlFor="stars">Actors</label>
           <input className="input" type="textfield" name="stars" placeholder='...actors, separated by commas' value={movie.stars} onChange={handleChange} />
         </div>
-        <button className="update-btn" type="submit">Save</button>
+        <button className="add-btn" type="submit">Add Movie</button>
       </form>
     </div>
   );
