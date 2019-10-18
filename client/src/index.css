@@ -16,6 +16,17 @@ body {
   margin: 1rem auto;
 }
 
+.movie-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn {
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+}
+
 .movie-director {
   padding: 4px 0;
   font-size: 0.8rem;
@@ -74,4 +85,52 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+/* update form */
+
+.update-form {
+  width: 50%;
+  margin: 75px auto;
+}
+
+.update-title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+.form-one-line {
+  display: flex;
+}
+
+.pair {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-3-4 {
+  width: 225px;
+  margin: 10px 2px;
+}
+
+.input-1-4 {
+  width: 60px;
+  margin: 10px 2px;
+}
+
+.input {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.update-btn {
+  width: 75px;
+  margin: 15px auto;
 }
